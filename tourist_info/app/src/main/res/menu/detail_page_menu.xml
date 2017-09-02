@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PlacesDetailView">
+    <item android:id="@+id/menu_placeEdit"
+        android:title="@string/edit"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:orderInCategory="1"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_placeDelete"
+        android:title="@string/delete"
+        android:icon="@android:drawable/ic_delete"
+        android:orderInCategory="2"
+        app:showAsAction="always"
+        />
+    <item android:id="@+id/menu_goBack"
+        android:title="Back"
+        android:icon="@drawable/backarrow"
+        android:orderInCategory="3"
+        app:showAsAction="always"
+        />
+</menu>

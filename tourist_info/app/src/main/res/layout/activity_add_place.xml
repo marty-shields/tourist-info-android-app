@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Place Details"
+        android:id="@+id/textView_Title_addPlace"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_title"
+        android:layout_gravity="center_horizontal"
+        android:hint="Name"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_location"
+        android:layout_gravity="center_horizontal"
+        android:hint="Location"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText_price"
+        android:layout_gravity="center_horizontal"
+        android:hint="Price"
+        android:maxLines="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_lat"
+        android:hint="Latitude"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_long"
+        android:layout_gravity="center_horizontal"
+        android:hint="Longitude"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText_desc"
+        android:layout_gravity="center_horizontal"
+        android:hint="Description" />
+</LinearLayout>

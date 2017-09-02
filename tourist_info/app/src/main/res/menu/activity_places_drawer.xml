@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Go Back"
+            android:id="@+id/placeBack"/>
+        <item android:title="Select Mode">
+            <menu>
+                <item
+                    android:id="@+id/placeAll"
+                    android:title="All" />
+                <item
+                    android:id="@+id/placeFav"
+                    android:title="Favourites" />
+                <item
+                    android:id="@+id/placePlanned"
+                    android:title="Planned" />
+                <item
+                    android:id="@+id/placeVisited"
+                    android:title="Visited" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Order By">
+        <menu>
+            <item
+                android:id="@+id/sortName"
+                android:title="Name" />
+            <item
+                android:id="@+id/sortLocationName"
+                android:title="Location Name" />
+            <item
+                android:id="@+id/sortRank"
+                android:title="Rank" />
+            <item
+                android:id="@+id/sortDatePlanned"
+                android:title="Date Planned" />
+            <item
+                android:id="@+id/sortDateVisited"
+                android:title="Date Visited" />
+        </menu>
+    </item>
+
+</menu>

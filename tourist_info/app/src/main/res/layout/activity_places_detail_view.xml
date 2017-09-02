@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.cet325.bg47hb.PlacesDetailView"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:id="@+id/imageView_detailPicture"
+                android:layout_gravity="top|center_horizontal"
+                android:contentDescription="@string/description_image"
+                android:layout_margin="5dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location:"
+                    android:id="@+id/textView_detailLocationTitle"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_detailLoc"
+                    android:textColor="#2d2d2d"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar_detailRank"
+                android:layout_gravity="center_horizontal"
+                android:stepSize="0.5"
+                android:numStars="5"
+                android:theme="@style/RatingBar"
+                android:isIndicator="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Todays Weather"
+                android:onClick="goWeather"
+                android:id="@+id/button_getWeather"
+                android:layout_gravity="center" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_detailFav"
+                android:checked="false"
+                android:clickable="false"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:enabled="false"
+                android:text="Favourite"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox_detailPlanned"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:text="Planned"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_detailPlanned"
+                    android:layout_marginLeft="4dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textColor="#2d2d2d" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox_detailVisited"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:text="Visited"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_detailVisited"
+                    android:layout_marginLeft="4dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textColor="#2d2d2d" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/geolocation_title"
+                android:id="@+id/textView_Title_detailGeo"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/textView_detailGeo"
+                android:textColor="#2d2d2d"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local Price:"
+                    android:id="@+id/textView__Title_detailPrice"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_detailPrice"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#2d2d2d"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favourite Currency:"
+                    android:id="@+id/textView_detail_title_favPrice"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_detailFavPrice"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#2d2d2d"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description_title"
+                android:id="@+id/textView_Title_detailDesc"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/textView_detailDesc"
+                android:textColor="#2d2d2d"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes"
+                android:id="@+id/textView_Title_detailNotes"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/textView_detailNotes"
+                android:textColor="#2d2d2d"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
